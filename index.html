@@ -1,18 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Pay</title>
 
-    <!----TAilwind CSS---->
-    <link rel="stylesheet" href="./Assets/CSS/output.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Pay</title>
+
+  <!----TAilwind CSS---->
+  <link rel="stylesheet" href="./Assets/CSS/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-700">
-    <div>
-      <input type="text" placeholder="Search">
-      <img src="" alt="Rosini">
+
+<body class="bg-zinc-800 max-w-xl mx-auto">
+
+  <!----Header section---->
+  <div>
+    <div class="relative flex items-center space-x-6 mt-4">
+      <input type="text" placeholder="Pay by number or phonenumber"
+        class="rounded-full bg-slate-600 pl-14 w-full outline-none p-2 text-slate-200">
+      <img src="./Assets/Images/Rosini.jpg" alt="Rosini" class="rounded-full w-14 h-14">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"
+        class="fill-neutral-300 absolute">
+        <path
+          d="M224.49 215.51L185 168a92.12 92.12 0 1 0-17 17l47.53 47.54a12 12 0 0 0 17-17ZM44 112a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68Z" />
+      </svg>
     </div>
+  </div>
+
+  <!-----banner---->
+  <div>
+    <img src="./Assets/Images/gpay-hero-banner.jpg" alt="gpay-banner" class="rounded">
+  </div>
+
+  <!----Icones---->
+  <section class="text-white text-sm grid grid-cols-4 gap-8 px-5 py-5">
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white">
+        <path
+          d="M2 7V2h5v2H4v3H2Zm0 15v-5h2v3h3v2H2Zm15 0v-2h3v-3h2v5h-5Zm3-15V4h-3V2h5v5h-2Zm-2.5 10.5H19V19h-1.5v-1.5Zm0-3H19V16h-1.5v-1.5ZM16 16h1.5v1.5H16V16Zm-1.5 1.5H16V19h-1.5v-1.5ZM13 16h1.5v1.5H13V16Zm3-3h1.5v1.5H16V13Zm-1.5 1.5H16V16h-1.5v-1.5ZM13 13h1.5v1.5H13V13Zm6-8v6h-6V5h6Zm-8 8v6H5v-6h6Zm0-8v6H5V5h6ZM9.5 17.5v-3h-3v3h3Zm0-8v-3h-3v3h3Zm8 0v-3h-3v3h3Z" />
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Scan any<br>
+        QR code</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="fill-none stroke-white">
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+          <path d="M8 36v8h24V4H8v8M6 30h4m-4-6h4m-4-6h4" />
+          <circle cx="24" cy="17" r="4" />
+          <path d="M24 35a8 8 0 1 0-16 0" />
+        </g>
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Pay<br>
+        contacts</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white">
+        <path
+          d="M7 23q-.825 0-1.413-.588T5 21v-6h2v3h10V6H7v3H5V3q0-.825.588-1.413T7 1h10q.825 0 1.413.588T19 3v18q0 .825-.588 1.413T17 23H7Zm0-3v1h10v-1H7Zm3.15-7H3q-.425 0-.713-.288T2 12q0-.425.288-.713T3 11h7.15l-.875-.9Q9 9.825 9 9.412t.3-.712q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T9.3 15.3q-.275-.275-.288-.688t.263-.712l.875-.9ZM7 4h10V3H7v1Zm0 0V3v1Zm0 16v1v-1Z" />
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Pay
+        phone <br>number</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36">
+        <path fill="#fff" d="M3.5 13.56L18 5.23l14.5 8.33a1 1 0 0 0 1-1.73L18 2.92L2.5 11.83a1 1 0 1 0 1 1.73Z"
+          class="clr-i-outline clr-i-outline-path-1" />
+        <path fill="#fff"
+          d="M4 26a1 1 0 0 0 1 1h26a1 1 0 0 0 0-2h-3v-7.37h-2V25h-7v-7.37h-2V25h-7v-7.37H8V25H5a1 1 0 0 0-1 1Z"
+          class="clr-i-outline clr-i-outline-path-2" />
+        <path fill="#fff" d="M5.02 14h26v2h-26z" class="clr-i-outline clr-i-outline-path-3" />
+        <path fill="#fff" d="M33 29H3a1 1 0 0 0 0 2h30a1 1 0 0 0 0-2Z" class="clr-i-outline clr-i-outline-path-4" />
+        <path fill="#fff" d="M22.15 11.58h3.21l-6.71-3.86a.8.8 0 0 0-.8 0l-6.72 3.86h3.21l3.9-2.24Z"
+          class="clr-i-outline clr-i-outline-path-5" />
+        <path fill="none" d="M0 0h36v36H0z" />
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Bank<br>
+        transfer</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="font-bold">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+          d="M30.801 22.51a1.284 1.284 0 0 1-.294 1.592m.294-1.592L21.171 4.5L10.19 42.346l20.316-18.244m7.146-.451a1.284 1.284 0 0 1-.294 1.592m.294-1.592l-9.51-17.97l-2.219 7.424m11.435 12.138L17.194 43.5l2.884-9.93" />
+      </svg>
+      <span class="text-gray-300 text-center mt-2"> Pay UPI ID<br>
+        or number</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="text-bold">
+        <g clip-rule="evenodd" fill="#fff" fill-rule="evenodd">
+          <path
+            d="m11.9999 3.96793c-1.3807 0-2.50002 1.11928-2.50002 2.5 0 1.38071 1.11932 2.5 2.50002 2.5s2.5-1.11929 2.5-2.5c0-1.38072-1.1193-2.5-2.5-2.5zm-3.50002 2.5c0-1.933 1.56702-3.5 3.50002-3.5s3.5 1.567 3.5 3.5c0 1.93299-1.567 3.5-3.5 3.5s-3.50002-1.56701-3.50002-3.5z" />
+          <path
+            d="m1.94229 15.2673c-.10863-.2538.00913-.5477.26301-.6563l4.13722-1.7702c.25388-.1086.54774.0091.65637.263l1.77015 4.1372c.10862.2539-.00913.5478-.26301.6564s-.54775-.0091-.65638-.263l-1.57346-3.6775-3.67753 1.5734c-.25388.1087-.54775-.0091-.65637-.263z" />
+          <path
+            d="m9.01102 12.0226c0-.2761.22386-.5.5-.5h3.63648c3.0787 0 5.7351 2.1599 6.3632 5.1739l.226 1.0842c.453 2.1735-1.2062 4.2141-3.4264 4.2141h-8.5805c-2.16889 0-3.81499-1.9535-3.44729-4.0909.14818-.8614.4146-1.6982.79171-2.4867l.80912-1.6918c.11914-.2491.41768-.3545.6668-.2353.24911.1191.35448.4177.23533.6668l-.80912 1.6917c-.33739.7055-.57575 1.4541-.70832 2.2248-.26258 1.5264.91293 2.9214 2.46177 2.9214h8.5805c1.5859 0 2.771-1.4576 2.4474-3.0101l-.2259-1.0842c-.5315-2.5503-2.7793-4.3779-5.3843-4.3779h-3.63648c-.27614 0-.5-.2238-.5-.5z" />
+        </g>
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Self<br>
+        transfer</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
+        height="24" viewBox="0 0 256 256" xml:space="preserve" class="fill-white stroke-white text-white">
+
+        <defs>
+        </defs>
+        <g style="stroke: white; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero;;"
+          transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+          <path
+            d="M 67.245 21.439 c -1.104 0 -2 -0.896 -2 -2 V 2.136 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 17.303 C 69.245 20.543 68.35 21.439 67.245 21.439 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 2 71.518 c -1.104 0 -2 -0.896 -2 -2 V 2.136 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 67.382 C 4 70.622 3.104 71.518 2 71.518 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 77.622 89.864 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 c 3.931 0 7.237 -2.721 8.137 -6.377 H 67.245 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 88 c 1.104 0 2 0.896 2 2 C 90 84.312 84.447 89.864 77.622 89.864 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 67.245 79.487 c -1.104 0 -2 -0.896 -2 -2 V 53.169 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 24.318 C 69.245 78.592 68.35 79.487 67.245 79.487 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 12.377 89.864 C 5.553 89.864 0 84.312 0 77.487 v -7.97 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 7.97 c 0 4.619 3.758 8.377 8.377 8.377 c 1.104 0 2 0.896 2 2 S 13.482 89.864 12.377 89.864 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 77.622 89.864 H 12.377 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 65.245 c 1.104 0 2 0.896 2 2 S 78.727 89.864 77.622 89.864 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 41.739 52.07 H 15.876 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 25.863 c 1.104 0 2 0.896 2 2 S 42.844 52.07 41.739 52.07 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 71.038 40.392 c -1.073 0 -1.949 -0.845 -1.998 -1.906 c -1.061 -0.049 -1.906 -0.925 -1.906 -1.998 c 0 -1.104 0.896 -2 2 -2 c 2.153 0 3.904 1.751 3.904 3.904 C 73.038 39.496 72.143 40.392 71.038 40.392 z M 69.134 38.487 h 0.01 H 69.134 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 67.245 31.748 c -1.104 0 -2 -0.896 -2 -2 V 27.39 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 2.358 C 69.245 30.852 68.35 31.748 67.245 31.748 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 69.134 38.487 h -3.778 c -2.153 0 -3.904 -1.751 -3.904 -3.904 v -2.931 c 0 -2.153 1.751 -3.904 3.904 -3.904 h 3.778 c 2.153 0 3.904 1.751 3.904 3.904 c 0 1.104 -0.896 2 -2 2 c -1.072 0 -1.948 -0.844 -1.998 -1.904 h -3.589 v 2.74 h 3.683 c 1.104 0 2 0.896 2 2 S 70.238 38.487 69.134 38.487 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: white; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 67.245 47.586 c -1.104 0 -2 -0.896 -2 -2 v -2.358 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 2.358 C 69.245 46.69 68.35 47.586 67.245 47.586 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 69.134 45.228 h -3.778 c -2.153 0 -3.904 -1.751 -3.904 -3.904 c 0 -1.104 0.896 -2 2 -2 c 1.072 0 1.948 0.844 1.998 1.904 h 3.589 v -2.836 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 2.932 C 73.038 43.476 71.287 45.228 69.134 45.228 z M 65.451 41.323 h 0.01 H 65.451 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: white; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 54.271 64.202 H 15.876 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 38.395 c 1.104 0 2 0.896 2 2 S 55.375 64.202 54.271 64.202 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 59.09 11.045 c -0.46 0 -0.92 -0.158 -1.293 -0.474 l -6.863 -5.814 l -6.862 5.814 c -0.746 0.632 -1.84 0.632 -2.586 0 l -6.863 -5.814 l -6.863 5.814 c -0.746 0.632 -1.84 0.632 -2.586 0 l -6.863 -5.814 l -6.862 5.814 c -0.746 0.632 -1.84 0.632 -2.586 0 L 0.707 3.662 C -0.136 2.948 -0.24 1.686 0.474 0.843 C 1.188 -0.001 2.45 -0.104 3.293 0.61 l 6.863 5.814 l 6.862 -5.814 c 0.746 -0.632 1.84 -0.632 2.586 0 l 6.863 5.814 L 33.33 0.61 c 0.746 -0.632 1.84 -0.632 2.586 0 l 6.863 5.814 l 6.862 -5.814 c 0.746 -0.632 1.84 -0.632 2.586 0 l 6.863 5.814 l 6.862 -5.814 c 0.843 -0.713 2.104 -0.61 2.819 0.233 c 0.714 0.843 0.609 2.105 -0.233 2.819 l -8.155 6.909 C 60.01 10.887 59.55 11.045 59.09 11.045 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 67.245 55.169 c -10.402 0 -18.865 -8.463 -18.865 -18.865 s 8.463 -18.865 18.865 -18.865 c 10.401 0 18.864 8.463 18.864 18.865 S 77.646 55.169 67.245 55.169 z M 67.245 21.439 c -8.196 0 -14.865 6.668 -14.865 14.865 s 6.669 14.865 14.865 14.865 S 82.109 44.5 82.109 36.304 C 82.109 28.107 75.441 21.439 67.245 21.439 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 34.69 39.939 H 15.876 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 H 34.69 c 1.104 0 2 0.896 2 2 S 35.794 39.939 34.69 39.939 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path
+            d="M 41.739 27.808 H 15.876 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 25.863 c 1.104 0 2 0.896 2 2 S 42.844 27.808 41.739 27.808 z"
+            style="stroke: white; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;"
+            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+        </g>
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Pay<br>
+        Bills</span>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M13.5 21H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v7m1 4l-2 3h4l-2 3M11 4h2m-1 13v.01" />
+      </svg>
+      <span class="text-gray-300 text-center mt-2">Mobile<br>
+        recharge</span>
+    </div>
+  </section>
+
+  <!--Quick balance--->
+  <section class="text-sm flex items-center jsudtify-center space-x-6 py-5 ml-28">
+    <div class="rounded-full bg-slate-600 text-gray-300 text-center px-3 py-1">
+      <strong>UPI Live balance:</strong> ₹20
+    </div>
+    <div class="rounded-full bg-slate-600 text-center text-gray-300 px-3 py-1">
+      <strong>UPI ID: </strong>jeyarosini11@oksbi
+    </div>
+  </section>
+
+  <!----People section---->
+  <section class="p-5 text-white">
+    <h1 class="text-xl font-medium pb-4">
+      People
+    </h1>
+    <div class="grid grid-cols-4 gap-4">
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <img src="" alt="Hari Hara Sudhan" class="rounded-full">
+        <span class="text-sm text-gray-300">Sudhan</span>
+      </div>
+      <div class="flex items-center justify-center flex-cols">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="rounded-full bg-slate-500">
+          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m6 10l6 6l6-6" />
+        </svg>
+      </div>
+    </div>
+
+  </section>
 </body>
+
 </html>
