@@ -58,9 +58,10 @@
   </div>
 
   <!-----banner---->
-  <div>
-    <img src="./Assets/Images/gpay-hero-banner.jpg" alt="gpay-banner" class="rounded">
-  </div>
+  <div class="bg-[url('./Assets/Images/gpay-hero-banner.jpg')] bg-cover pt-12 pb-32 text-center">
+    <p class="text-white font-semibold">Win Match tickets and more at <br>Britannia 5050 4</p>
+    <button type="button" class="hover:cursor-pointer hover:bg-sky-600 bg-blue-700 text-white rounded-full p-2 mt-2">Let's go</button>
+</div>
 
   <!----Icones---->
   <section
@@ -496,7 +497,30 @@
 <!--footer---->
 
 <footer>
-  <img src="./Assets/Images/gpay-footer.jpg" alt="footer image" class="rounded">
+  <div class="bg-[url('./Assets/Images/gpay-footer.jpg')] bg-cover p-6 pb-36 mb-18">
+      <div class="pt-20">
+          <h3 class="text-xl text-white font-semibold">Invite friends to get ₹201</h3>
+          <p class="pt-4 text-gary-500 text-white">Invite friends to Google Pay and get ₹201
+              <br> when you friend sends their first payment.
+              <br>They get ₹21</p>
+          <div class="flex flex-1 items-center pt-6 text-white">
+              <p>Copy your code <strong>bg670m</strong> </p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 20 20" class="fill-white">
+                      <path 
+                          d="M8 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8ZM7 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4ZM4 6a2 2 0 0 1 1-1.732V14.5A2.5 2.5 0 0 0 7.5 17h6.232A2 2 0 0 1 12 18H7.5A3.5 3.5 0 0 1 4 14.5V6Z" />
+                  </svg>
+          </div>
+      </div>
+      <div class="pt-10">
+          <button type="Invite" class="rounded text-blue-700 font-semibold border p-2 rounded-full border-white hover:bg-blue-700 hover:text-white">Invite now</button>
+      </div>
+  </div>
+
+  <div class="text-center text-white pt-4 pb-2">
+      <p>Showing businesses based on your location - <strong class="hover:cursor-pointer">Learn more</strong></p>
+  </div>
+
 </footer>
 </body>
 
